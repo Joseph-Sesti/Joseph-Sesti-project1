@@ -22,18 +22,26 @@ class Scraper
   end
   
   def get_N64_list
-    self.get_N64_page.css("div > p > span > strong").text
+    self.get_N64_page.css("div > p > span > strong").map do |strong|
+      strong.text
+    end
   end
     
   def get_PS1_list
-    self.get_PS1_page.css("div > p > span > strong").text
+    self.get_PS1_page.css("div > p > span > strong").map do |strong|
+      strong.text
+    end
   end
   
   def get_GCN_list
-    self.get_GCN_page.css("div > p > span > strong").text
+    self.get_GCN_page.css("div > p > span > strong").map do |strong|
+      strong.text
+    end
   end
   
   def get_PS2_list
-    self.get_PS2_page.css("div > p > span > strong").text
+    self.get_PS2_page.css("div > p > span > strong").map do |strong|
+      strong.text
+    end
   end
 end

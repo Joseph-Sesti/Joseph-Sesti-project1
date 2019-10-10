@@ -2,6 +2,12 @@ require "Joseph/Sesti/project1/version"
 
 class BestSellingGames::CLI
   
+  attr_reader :scraper
+  
+  def initialize
+    @scraper = Scraper.new
+  end
+  
   def call
     input = ""
     
@@ -15,17 +21,49 @@ class BestSellingGames::CLI
       
       case input
       when "N64"
-        list_N64
+        list_N64_games
       when "PS1"
-        list_PS1
+        list_PS1_games
       when "GCN"
-        list_GCN
+        list_GCN_games
       when "PS2"
-        list_PS2
+        list_PS2_games
       end
     end
   end
   
-  # def list_N64
-    
+  def list_N64_games
+    scraper.get_N64_list.map do |name|
+      game = BestSellingGames::BestSellingGames.new
+      game.console = "N64"
+      game.game = name
+      game
+    end
+  end
+  
+  def list_PS1_games
+    scraper.get_PS1_list.map do |name|
+      game = BestSellingGames::BestSellingGames.new
+      game.console = "PS1"
+      game.game = name
+      game
+    end
+  end
+  
+  def list_GCN_games
+    Scraper.get_GCN_list.map do |name|
+      game = BestSellingGames::BestSellingGames.new
+      game.console = "GCN"
+      game.game = name
+      game
+  end
+  
+  def list_PS2_games
+    Scraper.get_PS2_list.map do |name|
+      game = BestSellingGames::BestSellingGames.new
+      game.console = "PS2"
+      game.game = name
+      game
+  end
+  
 end
