@@ -1,5 +1,5 @@
 require "Joseph/Sesti/project1/version"
-require 'open-url'
+require 'open-uri'
 require 'nokogiri'
 require 'pry'
 
@@ -21,17 +21,17 @@ class Scraper
   end
   
   def get_N64_list
-    self.get_N64_page.css(".strong")
+    self.get_N64_page.css("div > p > span > strong")
   end
     
   def get_PS1_list
-    self.get_PS1_page.css(".strong")
+    self.get_PS1_page.css("div > p > span > strong")
   end
   
   def get_GCN_list
-    self.get_GCN_page.css(".strong")
+    self.get_GCN_page.css("div > p > span > strong")
   end
   
   def get_PS2_list
-    self.get_PS2_page.css(".strong")
+    self.get_PS2_page.css("div > p > span > strong")
   end

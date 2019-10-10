@@ -25,4 +25,7 @@ class CLI
       end
     end
   end
+  
+  def list_N64
+    
 end
