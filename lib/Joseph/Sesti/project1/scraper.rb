@@ -5,19 +5,19 @@ require 'pry'
 
 class Scraper
   def get_N64_page
-    doc = Nokogiri::HTML(open(http://www.vgchartz.com/article/260911/top-10-best-selling-nintendo-64-games/))
+    doc = Nokogiri::HTML(open("http://www.vgchartz.com/article/260911/top-10-best-selling-nintendo-64-games/"))
   end
   
   def get_PS1_page
-    doc = Nokogiri::HTML(open(http://www.vgchartz.com/article/260879/top-10-best-selling-playstation-games/))
+    doc = Nokogiri::HTML(open("http://www.vgchartz.com/article/260879/top-10-best-selling-playstation-games/"))
   end
   
   def get_GCN_page
-    doc = Nokogiri::HTML(open(http://www.vgchartz.com/article/261265/top-10-best-selling-gamecube-games/))
+    doc = Nokogiri::HTML(open("http://www.vgchartz.com/article/261265/top-10-best-selling-gamecube-games/"))
   end
   
   def get_PS2_page
-    doc = Nokogiri::HTML(open(http://www.vgchartz.com/article/261033/top-10-best-selling-playstation-2-games/))
+    doc = Nokogiri::HTML(open("http://www.vgchartz.com/article/261033/top-10-best-selling-playstation-2-games/"))
   end
   
   def get_N64_list
@@ -35,3 +35,4 @@ class Scraper
   def get_PS2_list
     self.get_PS2_page.css("div > p > span > strong")
   end
+end

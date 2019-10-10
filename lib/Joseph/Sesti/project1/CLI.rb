@@ -26,6 +26,6 @@ class BestSellingGames::CLI
     end
   end
   
-  def list_N64
+  # def list_N64
     
 end
