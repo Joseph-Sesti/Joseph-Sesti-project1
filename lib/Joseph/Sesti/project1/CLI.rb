@@ -56,6 +56,7 @@ class BestSellingGames::CLI
       game.console = "GCN"
       game.game = name
       game
+    end
   end
   
   def list_PS2_games
@@ -64,6 +65,6 @@ class BestSellingGames::CLI
       game.console = "PS2"
       game.game = name
       game
+    end
   end
-  
 end
