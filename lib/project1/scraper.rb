@@ -1,8 +1,3 @@
-require "Joseph/Sesti/project1/version"
-require 'open-uri'
-require 'nokogiri'
-require 'pry'
-
 class Scraper
   
   def get_N64_page

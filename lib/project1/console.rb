@@ -1,4 +1,4 @@
-class BestSellingGames::BestSellingGames
+class BestSellingGames::Console
   
   attr_accessor :console, :game
   

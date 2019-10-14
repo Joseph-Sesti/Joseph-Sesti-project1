@@ -1,5 +1,3 @@
-require "Joseph/Sesti/project1/version"
-
 class BestSellingGames::CLI
   
   attr_reader :scraper
