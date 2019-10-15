@@ -18,14 +18,14 @@ class BestSellingGames::CLI
       input = gets.strip
       
       case input
-      when "N64" || "PS1" || "GCN" || "PS2"
+      when "N64"
         list_N64_games
-      # when "PS1"
-      #   list_PS1_games
-      # when "GCN"
-      #   list_GCN_games
-      # when "PS2"
-      #   list_PS2_games
+      when "PS1"
+        list_PS1_games
+      when "GCN"
+        list_GCN_games
+      when "PS2"
+        list_PS2_games
       end
     end
   end
@@ -35,30 +35,19 @@ class BestSellingGames::CLI
     n64_list = scraper.get_N64_list
     puts n64_list
   end
+  
+  def list_PS1_games
+    ps1_list = scraper.get_PS1_list
+    puts ps1_list
+  end
+  
+  def list_GCN_games
+    gcn_list = scraper.get_GCN_list
+    puts gcn_list
+  end
+  
+  def list_PS2_games
+    ps2_list = scraper.get_PS2_list
+    puts ps2_list
+  end
 end
-  # def list_PS1_games
-  #   scraper.get_PS1_list.map do |name|
-  #     game = BestSellingGames::BestSellingGames.new
-  #     game.console = "PS1"
-  #     game.game = name
-  #     game
-  #   end
-  # end
-  
-  # def list_GCN_games
-  #   Scraper.get_GCN_list.map do |name|
-  #     game = BestSellingGames::BestSellingGames.new
-  #     game.console = "GCN"
-  #     game.game = name
-  #     game
-  #   end
-  # end
-  
-  # def list_PS2_games
-  #   Scraper.get_PS2_list.map do |name|
-  #     game = BestSellingGames::BestSellingGames.new
-  #     game.console = "PS2"
-  #     game.game = name
-  #     game
-  #   end
-  # end

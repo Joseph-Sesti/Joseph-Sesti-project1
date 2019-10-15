@@ -23,7 +23,7 @@ class Scraper
   
   def get_PS2_list
     ps2 = Nokogiri::HTML(open("http://www.vgchartz.com/article/261033/top-10-best-selling-playstation-2-games/"))
-    ps2css("div > p > span > strong").map do |strong|
+    ps2.css("div > p > span > strong").map do |strong|
       strong.text
     end
   end
