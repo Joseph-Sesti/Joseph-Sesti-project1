@@ -19,7 +19,7 @@ class BestSellingGames::CLI
       
       case input
       when "N64" || "PS1" || "GCN" || "PS2"
-        list_games
+        list_N64_games
       # when "PS1"
       #   list_PS1_games
       # when "GCN"
@@ -31,8 +31,8 @@ class BestSellingGames::CLI
   end
   
   
-  def list_games
-    n64_list = scraper.get_list
+  def list_N64_games
+    n64_list = scraper.get_N64_list
     puts n64_list
   end
 end
