@@ -16,7 +16,6 @@ class BestSellingGames::CLI
       puts "To see the best selling Sony Playstation 2 games, enter 'PS2'."
       
       input = gets.strip
-      
       case input
       when "N64"
         list_N64_games
@@ -30,6 +29,13 @@ class BestSellingGames::CLI
     end
   end
   
+  def list_games(console)
+    Consoles.each do |console, url|
+      if input = console
+        puts "#{url}"
+      end
+    end
+  end
   
   def list_N64_games
     n64_list = scraper.get_N64_list
