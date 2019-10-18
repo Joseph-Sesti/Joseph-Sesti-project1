@@ -1,6 +1,6 @@
 require 'pry'
 
-class Scraper
+class BestSellingGames::Scraper
   Consoles = {"N64" => "http://www.vgchartz.com/article/260911/top-10-best-selling-nintendo-64-games/", "PS1" => "http://www.vgchartz.com/article/260879/top-10-best-selling-playstation-games/", "GCN" => "http://www.vgchartz.com/article/261265/top-10-best-selling-gamecube-games/", "PS2" => "http://www.vgchartz.com/article/261033/top-10-best-selling-playstation-2-games/"}
   
   def get_list(console)
