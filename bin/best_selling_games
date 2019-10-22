@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
+#shebang
 
 require_relative '../lib/environment'
+#require_relative is for a class
 
-BestSellingGames::CLI.new.call
+require 'pry'
+#require is for a method
+
+cli = BestSellingGames::CLI.new.call

@@ -21,12 +21,18 @@ class BestSellingGames::CLI
       case input
       when "N64","PS1","GCN","PS2"
         print_games(input)
+      else
+        puts "Try Again"
       end
     end
   end
   
   def print_games(console)
-    list_of_games = scraper.get_list(console)
-    puts list_of_games
+    scraper.get_list(console)
+   # binding.pry
+    list_of_games = BestSellingGames::Game.games_by_console(console)
+    list_of_games.each do |game|
+      puts game.title
+    end
   end
 end
